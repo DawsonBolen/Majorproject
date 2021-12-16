@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<!-- meta tags and title -->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Connect Four</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Flavors&family=Readex+Pro&family=Roboto+Slab&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+
+		<!-- external and on-page CSS goes here -->
+		<link rel="stylesheet" href="style.css" media="all">
+		<style>
+			/* on-page CSS, if any, goes here */
+		</style>
+
+		<!-- external and on-page JavaScript goes here -->
+		<script type="text/javascript" src="scripts.js" defer></script>
+		<script>
+			// on-page JavaScript, if any, goes here
+		</script>
+
+	</head>
+
+	<body>
+
+		<div id="topheader">
+      <h1>Connect Four</h1>
+      
+     
+       <button id="tohome"><a href="homepage.html">Home</a></button>
+       
+       <button id="playagn" onclick="startNewGame()">Reset</button>
+    </div>
+    
+   
+    
+    <div>
+      
+     <p class="plyrtrn"></p>
+      
+
+    </div>
+    
+   
+
+    <div id="board">
+    
+      
+       <div id="row6">
+        <img class="cell" id="r6c1" onclick="fillCell('r6c1')" src="board-cell.png">
+        <img class="cell" id="r6c2" onclick="fillCell('r6c2')" src="board-cell.png">
+        <img class="cell" id="r6c3" onclick="fillCell('r6c3')" src="board-cell.png">
+        <img class="cell" id="r6c4" onclick="fillCell('r6c4')" src="board-cell.png">
+        <img class="cell" id="r6c5" onclick="fillCell('r6c5')" src="board-cell.png">
+        <img class="cell" id="r6c6" onclick="fillCell('r6c6')" src="board-cell.png">
+        <img class="cell" id="r6c7" onclick="fillCell('r6c7')" src="board-cell.png">
+      </div>
+      
+       <div id="row5">
+        <img class="cell" id="r5c1" onclick="fillCell('r5c1')" src="board-cell.png">
+        <img class="cell" id="r5c2" onclick="fillCell('r5c2')" src="board-cell.png">
+        <img class="cell" id="r5c3" onclick="fillCell('r5c3')" src="board-cell.png">
+        <img class="cell" id="r5c4" onclick="fillCell('r5c4')" src="board-cell.png">
+        <img class="cell" id="r5c5" onclick="fillCell('r5c5')" src="board-cell.png">
+        <img class="cell" id="r5c6" onclick="fillCell('r5c6')" src="board-cell.png">
+        <img class="cell" id="r5c7" onclick="fillCell('r5c7')" src="board-cell.png">
+      </div>
+      
+       <div id="row4">
+        <img class="cell" id="r4c1" onclick="fillCell('r4c1')" src="board-cell.png">
+        <img class="cell" id="r4c2" onclick="fillCell('r4c2')" src="board-cell.png">
+        <img class="cell" id="r4c3" onclick="fillCell('r4c3')" src="board-cell.png">
+        <img class="cell" id="r4c4" onclick="fillCell('r4c4')" src="board-cell.png">
+        <img class="cell" id="r4c5" onclick="fillCell('r4c5')" src="board-cell.png">
+        <img class="cell" id="r4c6" onclick="fillCell('r4c6')" src="board-cell.png">
+        <img class="cell" id="r4c7" onclick="fillCell('r4c7')" src="board-cell.png">
+      </div>
+      
+      
+       <div id="row3">
+        <img class="cell" id="r3c1" onclick="fillCell('r3c1')" src="board-cell.png">
+        <img class="cell" id="r3c2" onclick="fillCell('r3c2')" src="board-cell.png">
+        <img class="cell" id="r3c3" onclick="fillCell('r3c3')" src="board-cell.png">
+        <img class="cell" id="r3c4" onclick="fillCell('r3c4')" src="board-cell.png">
+        <img class="cell" id="r3c5" onclick="fillCell('r3c5')" src="board-cell.png">
+        <img class="cell" id="r3c6" onclick="fillCell('r3c6')" src="board-cell.png">
+        <img class="cell" id="r3c7" onclick="fillCell('r3c7')" src="board-cell.png">
+      </div>
+      
+      
+       <div id="row2">
+        <img class="cell" id="r2c1" onclick="fillCell('r2c1')" src="board-cell.png">
+        <img class="cell" id="r2c2" onclick="fillCell('r2c2')" src="board-cell.png">
+        <img class="cell" id="r2c3" onclick="fillCell('r2c3')" src="board-cell.png">
+        <img class="cell" id="r2c4" onclick="fillCell('r2c4')" src="board-cell.png">
+        <img class="cell" id="r2c5" onclick="fillCell('r2c5')" src="board-cell.png">
+        <img class="cell" id="r2c6" onclick="fillCell('r2c6')" src="board-cell.png">
+        <img class="cell" id="r2c7" onclick="fillCell('r2c7')" src="board-cell.png">
+      </div>
+      
+       <div id="row1">
+        <img class="cell" id="r1c1" onclick="fillCell('r1c1')" src="board-cell.png">
+        <img class="cell" id="r1c2" onclick="fillCell('r1c2')" src="board-cell.png">
+        <img class="cell" id="r1c3" onclick="fillCell('r1c3')" src="board-cell.png">
+        <img class="cell" id="r1c4" onclick="fillCell('r1c4')" src="board-cell.png">
+        <img class="cell" id="r1c5" onclick="fillCell('r1c5')" src="board-cell.png">
+        <img class="cell" id="r1c6" onclick="fillCell('r1c6')" src="board-cell.png">
+        <img class="cell" id="r1c7" onclick="fillCell('r1c7')" src="board-cell.png">
+      </div>
+      
+    </div>
+	</body>
+
+</html>

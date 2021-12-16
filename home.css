@@ -1,0 +1,39 @@
+body {
+  align-items: center;
+  text-align: center; 
+  
+}
+
+
+#homeheader {
+  font-size: 75px;
+  font-weight: 800;
+  font-family: 'Staatliches', cursive;
+  color: blue;
+}
+
+#pic {
+  display: inline-block;
+  align-items: center;
+}
+
+
+ 
+#strtgm {
+  background-color: blue;
+  border: 1px solid navy;
+  color: white;
+  padding: 12px 28px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: helvetica;
+  display: inline-block;
+  margin-bottom: 50px;
+ 
+}
+
+#strtgm:hover {
+  background-color: black;
+  
+}
